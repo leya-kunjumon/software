@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 
-#***********************developer***********************************************
+#***********************developer**************************************************
 def developer_Dashboard(request):
     return render(request,'developer/developer_Dashboard.html')
 

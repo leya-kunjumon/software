@@ -8,7 +8,7 @@ urlpatterns = [
    
 
 
-    #***********************developer***********************************************
+    #***********************developer**************************************************
     path('developer_Dashboard',views.developer_Dashboard, name='developer_Dashboard'),
     
 ]
