@@ -4,7 +4,10 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index', views.index, name='index'),
+
+#***********************developer***********************************************
+
+    path('developer_Dashboard', views.developer_Dashboard, name='developer_Dashboard'),
 
 
     
