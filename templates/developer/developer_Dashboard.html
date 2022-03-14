@@ -1,4 +1,5 @@
-{%extends 'developer\base_developer.html'%} {%load static%} {%block content%}
+{%extends 'developer\base_developer.html'%}  {%block content%}
+{% load static %}
 <div class="row">
     <div class="col-md-4 grid-margin stretch-card">
       <div class="card">
@@ -9,7 +10,7 @@
             
          
             <!-- <canvas id="transaction-history" class="transaction-chart"></canvas> -->
-            <img style="display: inline;justify-content: center;" src="face12.jpg"
+            <img style="display: inline;justify-content: center;" src="{% static '/assets/images/faces/face16.jpg' %}"
               class="p-2 rounded-circle" width="130" height="130" id="">
             <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-2 px-4 px-md-3 px-xl-4 rounded mt-3">
               <div class="text-md-center text-xl-left">
