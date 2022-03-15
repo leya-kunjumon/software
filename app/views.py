@@ -1,11 +1,14 @@
 from django.shortcuts import render
-
 # Create your views here.
 
-
-#***********************developer***********************************************
 def index(request):
     return render(request,'index.html')
+
+def software(request):
+    return render(request,'software.html')
+    
+#***********************developer***********************************************
+
 
 
 
