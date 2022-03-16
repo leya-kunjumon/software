@@ -15,8 +15,8 @@
 <div class="row mt-4">
     <div class="col-lg-2"></div>
     <div class="col-lg-8">
-  <!-- <form action="/HR_add/" method="post" autocomplete="off" enctype="multipart/form-data">
-    {%csrf_token%} -->
+   <form action="/pm_assignProject/" method="post" autocomplete="off" enctype="multipart/form-data">
+    {%csrf_token%}
     
         <div class="card" style="height: auto">
             <div class="card-body">
@@ -28,8 +28,8 @@
           <div class="form-group row">
             <label class="col-12 col-sm-4 col-md-4 col-lg-4 ml-3 " for="exampleInputUsername2" class="col-sm-3 col-form-label">Select Team Leader :</label>
             <div class="col-sm-6">
-                <select class="form-control text-light" name="yyy" id="" style='color:white '>
-                    <option class="text-center">
+                <select class="form-control text-light" name="yyy" id="" style='color:white 'required>
+                    <option class="text-center" value="">
                         --select--
                     </option>
        
@@ -46,8 +46,8 @@
           <div class="form-group row">
             <label class="col-12 col-sm-4 col-md-4 col-lg-4 ml-3 " for="exampleInputUsername2" class="col-sm-3 col-form-label">Project</label>
             <div class="col-sm-6">
-                <select class="form-control text-light" name="yyy" id="" style='color:white '>
-                    <option class="text-center">
+                <select class="form-control text-light" name="yyy" id="" style='color:white 'required>
+                    <option class="text-center" value="">
                         --select--
                     </option>
        
@@ -100,7 +100,7 @@
           <div class="form-group row">
             <label for="exampleInputConfirmPassword2" class="col-12 col-sm-4 col-md-4 col-lg-4 ml-3 col-form-label">File Upload</label>
             <div class="col-sm-6 ">
-              <input type="file" name="img" class="form-control text-light" id="choose" accept="image/*"/ >
+              <input type="file" name="img" class="form-control text-light" id="choose" accept="image/*"/ required>
             </div>
           </div>
 
@@ -120,7 +120,7 @@
       
     </div>
    
-  <!-- </form> -->
+   </form> 
   </div>
 
   <script>

@@ -7,25 +7,19 @@
 
 
   <div class="row">
-    <div class="mt-1 ml-5 text-light " style="font-size: 20px;font-weight: 600; ">Assigned Tasks</div>
+    <div class="mt-1 ml-5 text-light " ><h4 class="card-title ">Assigned Tasks</h4></div>
     <div class="col-12 grid-margin table1">
       <div class="card p-3">
         <div class="card-body">
           <h4 class="card-title ">Tasks</h4>
-          <input type="text" style="color: white;" onkeyup="myFunction()" class="form-control " id="search"
+          <input type="text" style="color: white;" onkeyup="myFunction()" class="form-control text-light" id="search"
             name="search" autocomplete="off" placeholder="Search...">
           <br>
           <div class="table-responsive">
             <table class="table" id="myTable">
               <thead>
                 <tr>
-                  <!-- <th>
-                                    <div class="form-check form-check-muted m-0">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input">
-                                        </label>
-                                    </div>
-                                </th> -->
+                 
                   <th> S.No </th>
                   <th> Task Name </th>
                   <th> Due Date </th>
@@ -51,7 +45,34 @@
                     </td>
                   
                 </tr>
-                
+                <tr>
+
+
+                  <td>2</td>
+                  <td>new project new task2 as</td>
+                  <td>24-03-2022</td>
+                  <td></td>
+                  
+                    <td><a href="#">
+                        <div class="badge badge-outline-success">Completed</div>
+                      </a>
+                    </td>
+                  
+                </tr>
+                <tr>
+
+
+                  <td>3</td>
+                  <td>new project new task3 as</td>
+                  <td>24-03-2022</td>
+                  <td></td>
+                  
+                    <td><a href="/developer_task_form/">
+                        <div class="badge badge-outline-primary">Pending</div>
+                      </a>
+                    </td>
+                  
+                </tr>
               </tbody>
             </table>
           </div>

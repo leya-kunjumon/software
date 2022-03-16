@@ -194,7 +194,6 @@ urlpatterns = [
 
     #**************************project**************************
 
-    path('project_card/',views.project_card,name='project_card'),
     path('project_details/',views.project_details,name='project_details'),
 
     #************************** client  **************************

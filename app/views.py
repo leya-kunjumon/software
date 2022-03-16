@@ -523,9 +523,6 @@ def tl_leaverequest_view(request):
 
 #**********************project*************************
 
-def project_card(request):
-    return render(request,'project\project_card.html')
-
 def project_details(request):
     return render(request,'project\project_details.html')
 

@@ -1,10 +1,6 @@
 {%extends 'pm\base_pm.html'%} {% load static %} {% block content %}
 
-<style>
-    table tr[data-href] {
-        cursor: pointer;
-    }
-</style>
+
 
 <div class="row ">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 grid-margin">
@@ -26,7 +22,7 @@
                 <div class="table-responsive">
                     <table class="table" id="myTable">
                         <thead>
-                            <tr data-href="#">
+                            <tr >
 
                                 <th> Date </th>
                                 <th> Login Time </th>
@@ -36,7 +32,7 @@
                         </thead>
                         <tbody>
                             
-                            <tr data-href="#">
+                            <tr >
                                 <td> 10-03-2022</td>
                                 <td>2:30</td>
                                 <td>3:30</td>
@@ -44,7 +40,7 @@
                                     <div class="badge badge-outline-success">Present</div>
                                 </td>
                             </tr>
-                            <tr data-href="#">
+                            <tr >
                                 <td> 12-03-2022</td>
                                 <td>4:30</td>
                                 <td>5:30</td>
@@ -87,12 +83,7 @@
     }
 
 
-    $(document).ready(function() {
-        $('table tr').click(function() {
-            window.location = $(this).data('href');
-            return false;
-        });
-    });
+   
 </script>
 
 
