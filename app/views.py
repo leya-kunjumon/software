@@ -521,5 +521,19 @@ def tl_leaverequest(request):
 def tl_leaverequest_view(request):
     return render(request,'tl/tl_leavereq_view.html')
 
+#**********************project*************************
 
+def project_card(request):
+    return render(request,'project\project_card.html')
+
+def project_details(request):
+    return render(request,'project\project_details.html')
+
+#*************************client**************************8
+
+def client_card(request):
+    return render(request,'client\client_card.html')
+
+def client_details(request):
+    return render(request,'client\client_details.html')
 
