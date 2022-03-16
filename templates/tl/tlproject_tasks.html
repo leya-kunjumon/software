@@ -1,4 +1,4 @@
-{%extends 'tlDashboard.html'%}
+{%extends 'tl\tlDashboard.html'%} 
 {%load static%}
 {%block content%}
 <style>
@@ -28,7 +28,7 @@
   <div class="card">
     <div class="card-body">
      
-      <input type="text" class="form-control text-light" id="search" onkeyup="myFunction()" placeholder="search">
+      <input type="text" class="form-control " id="search" onkeyup="myFunction()" placeholder="search">
       <div class="table-responsive">
         <table class="table" id="myTable">
           <thead">
@@ -46,9 +46,9 @@
               
 
               <tr>
-                <td  style="color:#6C7293">task</td>
+                <td  style="color:#6C7293">tl module</td>
 
-                <td  style="color:#6C7293">task</td>
+                <td  style="color:#6C7293">anu</td>
 
                 <td class="text-info"><a href="{% url 'tl_projecttask_status' %}" data-toggle="modal" data-target="#taskstatus{{i.id}}"
                     style="text-decoration: none;">
@@ -104,13 +104,13 @@
 
           <div class="row ">
             <div class="col-md-1"></div>
-            <div class="col-md-2 mt-2" style="color:white;">Start date</div>
+            <div class="col-md-2 mt-2" style="color:#6C7293;">Start date</div>
             <div class="col-md-2 mt-2">
-              <div class="ml-3" style="color:white;">{{i.startdate}}</div>
+              <div class="ml-3" style="color:#6C7293;">16/03/2022</div>
             </div>
             <div class="col-md-2"></div>
-            <div class="col-md-2 mt-2" style="color:white;"> End date</div>
-            <div class="col-md-2 mt-2" style="color:white;"> {{i.enddate}}</div>
+            <div class="col-md-2 mt-2" style="color:#6C7293;"> End date</div>
+            <div class="col-md-2 mt-2" style="color:#6C7293;"> 17/03/2022</div>
             <div class="col-md-1"></div>
           </div>
           
@@ -118,12 +118,12 @@
 
             <div class="row mt-3">
               <div class="col-md-1"></div>
-              <div class="col-md-2 mt-2" style="color:white;">Assigned to</div>
+              <div class="col-md-2 mt-2" style="color:#6C7293;">Assigned to</div>
               <div class="col-md-2 mt-2">
-                <div style="color:white;">{{i.user}}</div>
+                <div style="color:#6C7293;">anandhu</div>
               </div>
               <div class="col-md-2"></div>
-              <div class="col-md-2 mt-2" style="color:white;">Progress</div>
+              <div class="col-md-2 mt-2" style="color:#6C7293;">Progress</div>
               <div class="col-md-2 mt-2"> <span class="progress" data-toggle="modal" data-target=""
                   style="border-radius:5px;height:20px;background-color:#C2F0EB">
                   <span class="progress-bar" style="height:20px;">{{i.progress}}%</span></div>
@@ -132,7 +132,7 @@
 
             <div class="row mt-3">
               <div class="col-md-1"></div>
-              <div class="col-md-2 mt-2" style="color:white;">Status</div>
+              <div class="col-md-2 mt-2" style="color:#6C7293;">Status</div>
               <div class="col-md-2 mt-2">
                 <select class="drop form-control ml-3 mt-2 text-light name="status" style="border:1px solid #6C7293 ;" required>
                   <option value="" selected="selected" class="text-light mt-2">Not selected</option>
@@ -142,14 +142,14 @@
                 </select>
               </div>
               <div class="col-md-2"></div>
-              <div class="col-md-2 mt-2" style="color:white;">Current status</div>
-              <div class="col-md-2 mt-2" style="color:white;"> {{i.projectstatus}}</div>
+              <div class="col-md-2 mt-2" style="color:#6C7293;">Current status</div>
+              <div class="col-md-2 mt-2" style="color:#6C7293;"> {{i.projectstatus}}</div>
               <div class="col-md-1"></div>
             </div>
 
             <div class="row mt-3">
               <div class="col-md-1"></div>
-              <div class="col-md-2 mt-1 mt-2" style="color:white;">Progress</div>
+              <div class="col-md-2 mt-1 mt-2" style="color:#6C7293;">Progress</div>
               <div class="col-md-2 mt-1 mt-2">
                 <input type="text" name="progress" class="form-control">
               </div>
@@ -168,7 +168,7 @@
 
       <div class="container mt-1 " style="border-top:1px solid grey;">
         <div class="text-info pt-4" style="font-size: 20px;font-weight: 600;">Project description</div>
-        <div class="pt-3 " style="margin-left:20px;color:white;">{{i.description}}</div>
+        <div class="pt-3 " style="margin-left:20px;color:rgb(136, 130, 130);">{{i.description}}</div>
       </div>
 
       <div class="container mt-3" style="border-top:1px solid grey;border-bottom:1px solid grey;">
@@ -210,13 +210,13 @@
           <tbody>
             <tr>
              
-              <td style="color:white;">03/15/2022</td>
-              <td style="color:white;">project</td>
-              <td style="color:white;">dsdvvdvv
+              <td style="color:#6C7293;">03/15/2022</td>
+              <td style="color:#6C7293;">project</td>
+              <td style="color:#6C7293;">dsdvvdvv
               </td>
-              <td style="color:white;">status
+              <td style="color:#6C7293;">status
               </td>
-              <td style="color:white;"><a href="{{i.files}}" download style="text-decoration:none;">
+              <td style="color:#6C7293;"><a href="{{i.files}}" download style="text-decoration:none;">
                   <div class="badge badge-outline-info">Download</div>
                 </a></td>
               <td class="text-info">nnnnn</td>
@@ -262,12 +262,12 @@
 
 
               <tr>
-                <td style="color:white;">{{i.date|date:" d-m-Y" }}</td>
+                <td style="color:#6C7293;">16/03/2022</td>
 
-                <td style="color:white;">{{dp.task}}</td>
+                <td style="color:#6C7293;">tl module</td>
 
 
-                <td style="color:white;">{{i.workdone}}
+                <td style="color:#6C7293;">progress
                 </td>
                 <td class="text-info"><button type="button" class="btn badge-outline-primary">
                   <a href="{{i.files.url}}" style="text-decoration: none;" download>Download</a></button></td>
@@ -277,13 +277,13 @@
               
 
               <tr>
-                <td style="color:white;">{{time|date:" d-m-Y"}}</td>
+                <td style="color:#6C7293;">7.30pm 16/03/2022</td>
 
-                <td style="color:white;">{{dp.task}}
+                <td style="color:#6C7293;">tl
                 </td>
 
 
-                <td style="color:white;"><textarea type="text" name="workdone" class="form-control"
+                <td style="color:#6C7293;"><textarea type="text" name="workdone" class="form-control"
                     style="height: 75px;"></textarea></td>
                 <td class="text-info"><input type="file" name="filed"></td>
                 <td class="text-info"><button type="submit" class="btn badge-outline-primary">submit</button></td>
@@ -324,7 +324,7 @@
             <div class="row">
               <div class="col-md-4">
 
-                <div class="mr-2 ml-3 mt-2" style="color:white;">Requested Days</div>
+                <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Requested Days</div>
               </div>
               <div class="col-md-8 ">
                 <input type="number" name="days" class="drop form-control ml-3 mt-2" required
@@ -333,7 +333,7 @@
             </div>
             <div class="row pt-1">
               <div class="col-md-4">
-                <div class=" mr-2 ml-3 mt-2" style="color:white;">Reason</div>
+                <div class=" mr-2 ml-3 mt-2" style="color:#6C7293;">Reason</div>
               </div>
               <div class="col-md-8 ">
                 <textarea name="reason" class="form-control  ml-3 mt-2 "
@@ -342,15 +342,15 @@
             </div>
             <div class="row pt-1">
               <div class="col-md-4">
-                <div class="mr-2 ml-3 mt-2" style="color:white;">Previous Status</div>
+                <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Previous Status</div>
               </div>
               <div class="col-md-8 ">
 
                 
-                <div class="mt-2" style="color:white;">{{dp.extension_status}} on {{dp.extension_date|date:"d-m-Y"}} for
+                <div class="mt-2" style="color:#d0d3e6;">{{dp.extension_status}} on {{dp.extension_date|date:"d-m-Y"}} for
                   {{dp.extension}} days</div>
                 
-                <div class="mt-2" style="color:white;">Not extended ....yet !!!</div>
+                <div class="mt-2" style="color:#6C7293;">Not extended ....yet !!!</div>
               
 
 
@@ -424,9 +424,9 @@
               
 
               <tr>
-                <td style="color:white;">{{i.task}}</td>
+                <td style="color:#6C7293;">tl module</td>
 
-                <td style="color:white;">{{i.tl}}</td>
+                <td style="color:#6C7293;">anu</td>
 
                 <td class="text-info"><a href="" data-toggle="modal" data-target="#taskstatus{{i.id}}"
                     style="text-decoration: none;">
@@ -480,13 +480,13 @@
 
           <div class="row ">
             <div class="col-md-1"></div>
-            <div class="col-md-2 mt-2" style="color:white;">Start date</div>
+            <div class="col-md-2 mt-2" style="color:#6C7293;">16/03/2022</div>
             <div class="col-md-2 mt-2">
-              <div class="ml-3" style="color:white;">{{i.startdate}}</div>
+              <div class="ml-3" style="color:#6C7293;">17/03/2022</div>
             </div>
             <div class="col-md-2"></div>
-            <div class="col-md-2 mt-2" style="color:white;"> End date</div>
-            <div class="col-md-2 mt-2" style="color:white;"> {{i.enddate}}</div>
+            <div class="col-md-2 mt-2" style="color:#6C7293;"> End date</div>
+            <div class="col-md-2 mt-2" style="color:#6C7293;"> 18/03/2022</div>
             <div class="col-md-1"></div>
           </div>
           
@@ -494,12 +494,12 @@
 
             <div class="row mt-3">
               <div class="col-md-1"></div>
-              <div class="col-md-2 mt-2" style="color:white;">Assigned to</div>
+              <div class="col-md-2 mt-2" style="color:#6C7293;">Assigned to</div>
               <div class="col-md-2 mt-2">
-                <div style="color:white;">{{i.user}}</div>
+                <div style="color:#6C7293;">{{i.user}}</div>
               </div>
               <div class="col-md-2"></div>
-              <div class="col-md-2 mt-2" style="color:white;">Progress</div>
+              <div class="col-md-2 mt-2" style="color:#6C7293;">Progress</div>
               <div class="col-md-2 mt-2"> <span class="progress" data-toggle="modal" data-target=""
                   style="border-radius:5px;height:20px;background-color:#C2F0EB">
                   <span class="progress-bar" style="height:20px;">{{i.progress}}%</span></div>
@@ -508,7 +508,7 @@
 
             <div class="row mt-3">
               <div class="col-md-1"></div>
-              <div class="col-md-2 mt-2" style="color:white;">Status</div>
+              <div class="col-md-2 mt-2" style="color:#6C7293;">Status</div>
               <div class="col-md-2 mt-2">
                 <select class="drop form-control ml-3 mt-2 text-light name="status" style="border:1px solid #6C7293 ;" required>
                   <option value="" selected="selected" class="text-light mt-2">Not selected</option>
@@ -518,14 +518,14 @@
                 </select>
               </div>
               <div class="col-md-2"></div>
-              <div class="col-md-2 mt-2" style="color:white;">Current status</div>
-              <div class="col-md-2 mt-2" style="color:white;"> {{i.projectstatus}}</div>
+              <div class="col-md-2 mt-2" style="color:#6C7293;">progress</div>
+              <div class="col-md-2 mt-2" style="color:#6C7293;"> progress</div>
               <div class="col-md-1"></div>
             </div>
 
             <div class="row mt-3">
               <div class="col-md-1"></div>
-              <div class="col-md-2 mt-1 mt-2" style="color:white;">Progress</div>
+              <div class="col-md-2 mt-1 mt-2" style="color:#6C7293;">Progress</div>
               <div class="col-md-2 mt-1 mt-2">
                 <input type="text" name="progress" class="form-control">
               </div>
@@ -587,16 +587,16 @@
           <tbody>
             <tr>
              
-              <td style="color:white;">{{i.date}} </td>
-              <td style="color:white;">{{i.subtask}}</td>
-              <td style="color:white;">{{i.project.description}}
+              <td style="color:#6C7293;">16/03/2022 </td>
+              <td style="color:#6C7293;">sub task</td>
+              <td style="color:#6C7293;">{{i.project.description}}
               </td>
-              <td style="color:white;">{{i.status}}
+              <td style="color:#6C7293;">progrss
               </td>
-              <td style="color:white;"><a href="{{i.files}}" download style="text-decoration:none;">
+              <td style="color:#6C7293;"><a href="{{i.files}}" download style="text-decoration:none;">
                   <div class="badge badge-outline-info">Download</div>
                 </a></td>
-              <td class="text-info">{{i.user_registration.fullname}}</td>
+              <td class="text-info">anu</td>
             </tr>
            
           </tbody>
@@ -639,12 +639,12 @@
 
               
               <tr>
-                <td style="color:white;">{{i.date|date:" d-m-Y" }}</td>
+                <td style="color:#6C7293;">16/03/2022</td>
 
-                <td style="color:white;">{{dp.task}}</td>
+                <td style="color:#6C7293;">sub task</td>
 
 
-                <td style="color:white;">{{i.workdone}}
+                <td style="color:#6C7293;">work done
                 </td>
                 <td class="text-info"><button type="button" class="btn badge-outline-primary">
                   <a href="{{i.files.url}}" style="text-decoration: none;" download>Download</a></button></td>
@@ -654,13 +654,13 @@
            
 
               <tr>
-                <td style="color:white;">{{time|date:" d-m-Y"}}</td>
+                <td style="color:#6C7293;">2.30pm 16/03/2022</td>
 
-                <td style="color:white;">{{dp.task}}
+                <td style="color:#6C7293;">task
                 </td>
 
 
-                <td style="color:white;"><textarea type="text" name="workdone" class="form-control"
+                <td style="color:#6C7293;"><textarea type="text" name="workdone" class="form-control"
                     style="height: 75px;"></textarea></td>
                 <td class="text-info"><input type="file" name="filed"></td>
                 <td class="text-info"><button type="submit" class="btn badge-outline-primary">submit</button></td>
@@ -702,7 +702,7 @@
             <div class="row">
               <div class="col-md-4">
 
-                <div class="mr-2 ml-3 mt-2" style="color:white;">Requested Days</div>
+                <div class="mr-2 ml-3 mt-2"style="color:#6C7293;">Requested Days</div>
               </div>
               <div class="col-md-8 ">
                 <input type="number" name="days" class="drop form-control ml-3 mt-2" required
@@ -711,24 +711,24 @@
             </div>
             <div class="row pt-1">
               <div class="col-md-4">
-                <div class=" mr-2 ml-3 mt-2" style="color:white;">Reason</div>
+                <div class=" mr-2 ml-3 mt-2" style="color:#6C7293;">Reason</div>
               </div>
               <div class="col-md-8 ">
                 <textarea name="reason" class="form-control  ml-3 mt-2 "
-                  style="height:70px;border:1px solid #6C7293 ;"></textarea>
+                  style="height:70px;border:1px solid #6C7293 ;">nnnnnnn</textarea>
               </div>
             </div>
             <div class="row pt-1">
               <div class="col-md-4">
-                <div class="mr-2 ml-3 mt-2" style="color:white;">Previous Status</div>
+                <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Previous Status</div>
               </div>
               <div class="col-md-8 ">
 
               
-                <div class="mt-2" style="color:white;">{{dp.extension_status}} on {{dp.extension_date|date:"d-m-Y"}} for
+                <div class="mt-2" style="color:#6C7293;">{{dp.extension_status}} on {{dp.extension_date|date:"d-m-Y"}} for
                   {{dp.extension}} days</div>
             
-                <div class="mt-2" style="color:white;">Not extended ....yet !!!</div>
+                <div class="mt-2" style="color:#6C7293;">Not extended ....yet !!!</div>
          
 
 

@@ -14,7 +14,7 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title mt-3" style="text-align:center">Attendance</h4>
-                <form class="forms-sample" action="admin_attendance_show" method="post" enctype="multipart/form-data" autocomplete="OFF">
+                <form class="forms-sample" action="/admin_attendance_show/" method="post" enctype="multipart/form-data" autocomplete="OFF">
                     {% csrf_token %}
                     <div class="row mt-5">
                         <div class="col-md-12">
@@ -24,8 +24,8 @@
                                 <div class="col-12 col-sm-8 col-md-8 col-lg-8 ">
                                     <select class="form-control" id="regdetailsdept" style="color:white;" name="Department" required>
                                         <option selected="true" disabled="disabled" value="">Select an option</option>
-                                    <option value=""></option>
-                                    <option value="">software</option>
+                                    <option value="">Python</option>
+                                    <option value="">Java</option>
                                     </select>
                                 </div>
                             </div>
@@ -35,8 +35,8 @@
                                 <div class="col-12 col-sm-8 col-md-8 col-lg-8 ">
                                     <select class="form-control" id="regdetailsdept" style="color:white;" name="Department" required>
                                         <option selected="true" disabled="disabled" value="">Select an option</option>
-                                    <option value=""></option>
-                                    <option value="">manager</option>
+                                    <option value="">TL</option>
+                                    <option value="">Developer</option>
                                     </select>
                                 </div>
                             </div>
@@ -45,7 +45,6 @@
                                 <div class="col-12 col-sm-8 col-md-8 col-lg-8 ">
                                     <select class="form-control" id="regdetailsdept" style="color:white;" name="Department" required>
                                         <option selected="true" disabled="disabled" value="">Select an option</option>
-                                    <option value=""></option>
                                     <option value="">abc</option>
                                     <option value="">asd</option>
                                     </select>

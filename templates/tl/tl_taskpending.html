@@ -1,5 +1,5 @@
 
-{%extends 'tlDashboard.html'%}
+{%extends 'tl\tlDashboard.html'%} 
 {%load static%}
 {%block content%}
 <style>
@@ -48,31 +48,31 @@
         <form action="#" method="post" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="form-group row">
-            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">TASK</label>
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:#6C7293 ;">TASK</label>
             <div class="col-sm-9">
                 <label for="exampleInputUsername2" class="col-sm-3 col-form-label"style="color:#6C7293;">TL module</label>
             </div>
           </div>
           <div class="form-group row">
-            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">SUBMISSION DATE</label>
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:#6C7293 ;">SUBMISSION DATE</label>
             <div class="col-sm-9">
                 <label for="exampleInputUsername2" class="col-sm-3 col-form-label"style="color:#6C7293;">15/03/2022</label>
             </div>
           </div>
           <div class="form-group row">
-            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">DUE DATE</label>
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:#6C7293 ;">DUE DATE</label>
             <div class="col-sm-9">
                 <label for="exampleInputUsername2" class="col-sm-3 col-form-label"style="color:#6C7293;">15/03/2022</label>
             </div>
           </div>
           <div class="form-group row">
-            <label for="exampleInputMobile" class="col-sm-3 col-form-label">SCREENSHOT</label>
+            <label for="exampleInputMobile" class="col-sm-3 col-form-label" style="color:#6C7293 ;">SCREENSHOT</label>
             <div class="col-sm-5">
               <input type="file" name="scn" class="form-control" style="text-decoration:none;border:none;background-color: #191c24;color:#6C7293 ;">
             </div>
           </div>
           <div class="form-group row">
-            <label for="exampleInputMobile" class="col-sm-3 col-form-label">DESCRIPTION</label>
+            <label for="exampleInputMobile" class="col-sm-3 col-form-label" style="color:#6C7293 ;">DESCRIPTION</label>
               <span class="col-sm-9">
                 <textarea class="form-control" name="description" style="height: 150px; max-width: 300px; color:#6C7293;"></textarea>
                 </span>

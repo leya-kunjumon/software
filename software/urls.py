@@ -170,7 +170,6 @@ urlpatterns = [
     #*******************************TL********************************************
 
     path('index_tl/', views.index_tl, name='index_tl'),
-    path('homepage/', views.homepage, name='homepage'),
     path('tlproject/', views.tlproject, name='tlproject'),
     path('tlproject_task/', views.tlproject_task, name='tlproject_task'),
     path('tl_project_splittask/', views.tl_project_splittask, name='tl_project_splittask'),
@@ -200,4 +199,13 @@ urlpatterns = [
 
     path('client_card/',views.client_card,name='client_card'),
     path('client_details/',views.client_details,name='client_details'),
+
+    #*************************  hr  ****************************
+    path('base_hr/',views.base_hr,name='base_hr'),
+    path('hr_Dashboard/',views.hr_Dashboard,name='hr_Dashboard'),
+    path('hr_view_attendance/',views.hr_view_attendance,name='hr_view_attendance'),
+    path('hr_view_attendance_list/',views.hr_view_attendance_list,name='hr_view_attendance_list'),
+    path('hr_vacancy_list/',views.hr_vacancy_list,name='hr_vacancy_list'),
+    path('hr_vacancy_details/',views.hr_vacancy_details,name='hr_vacancy_details'),
+    
 ]

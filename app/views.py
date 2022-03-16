@@ -452,12 +452,10 @@ def admin_manager_reported_issue_show(request):
     return render(request,'admin\Admin_manager_reported_issue_show.html')
     #*******************************TL********************************
 
+
 def index_tl(request):
-    return render(request,'tl/tlDashboard.html')
-
-def homepage(request):
     return render(request,'tl/tlHomepage.html')
-
+    
 def tlproject(request):
     return render(request,'tl/tlProject.html')
 
@@ -521,6 +519,7 @@ def tl_leaverequest(request):
 def tl_leaverequest_view(request):
     return render(request,'tl/tl_leavereq_view.html')
 
+
 #**********************project*************************
 
 def project_details(request):
@@ -534,3 +533,22 @@ def client_card(request):
 def client_details(request):
     return render(request,'client\client_details.html')
 
+#****************** hr module ******************************************
+
+def hr_Dashboard(request):
+    return render(request,'hr\hr_Dashboard.html')
+
+def base_hr(request):
+     return render(request,'hr\base_hr.html')
+
+def hr_view_attendance(request):
+     return render(request,'hr\hr_view_attendance.html')
+
+def hr_view_attendance_list(request):
+     return render(request,'hr\hr_view_attendance_list.html')
+
+def hr_vacancy_list(request):
+     return render(request,'hr\hr_vacancy_list.html')
+
+def hr_vacancy_details(request):
+     return render(request,'hr\hr_vacancy_details.html')

@@ -1,4 +1,4 @@
-{%extends 'tlDashboard.html'%}
+{%extends 'tl\tlDashboard.html'%} 
 {%load static%}
 {%block content%}
 <style>
@@ -87,18 +87,18 @@
            <div class="row">
              
             <div class="col-md-6 col-lg-6">
-              <div class="text-left mt-3 ">FROM</div>
+              <div class="text-left mt-3 " style="color: #6C7293;">FROM</div>
               <input autocomplete="off" id="txtDate" type="date" name="from" class="form-control mt-2 " style="border-radius:5px;"
                 id="from" onchange="myFunction()" placeholder="Leave From..." autocomplete="off" required>
             </div>
             <div class="col-md-6">
-              <div class="text-left mt-3 ">TO</div>
+              <div class="text-left mt-3  " style="color: #6C7293;">TO</div>
               <input autocomplete="off"  id="txtDate1" type="date" name="to" class="form-control mt-2" style="border-radius:5px;" id="to"
                 onchange="myFunction()" placeholder="Leave To..." autocomplete="off" required>
             </div>
           </div>
           
-          <div class="col pt-2" id="halful">
+          <div class="col pt-2" id="halful" style="color: #6C7293;">
             <input type="radio" id="half" name="haful" value="Half Day">
             <label id="hf">Half Day</label><br>
             <input type="radio" id="full" name="haful" value="Full Day" checked="checked">
@@ -106,7 +106,7 @@
           </div>
           <div class="row">
             <div class="container">
-              <div class="text-left mt-5 ">REASON</div>
+              <div class="text-left mt-5 " style="color: #6C7293;">REASON</div>
               <textarea autocomplete="off" type="text" name="reason" class="form-control mt-2 " style="border-radius:5px;"
                 id="reason" placeholder="Leave Reason" required></textarea>
             </div>

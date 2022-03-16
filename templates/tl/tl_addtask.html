@@ -1,4 +1,4 @@
-{%extends 'tlDashboard.html'%}
+{%extends 'tl\tlDashboard.html'%} 
 {%load static%}
 {%block content%}
 <style>
@@ -28,7 +28,7 @@
 
           <div class="row pt-1">
             <div class="col-md-4">
-              <div class="mr-2 ml-3 mt-2" style="color:white ;">Select Employee </div>
+              <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Select Employee </div>
             </div>
             <div class="col-md-8 ">
               <select id="" name="ename" class="drop form-control ml-3 mt-2 text-light" required
@@ -43,7 +43,7 @@
           </div>
           <div class="row pt-1">
             <div class="col-md-4">
-              <div class="mr-2 ml-3 mt-2" style="color:white ;">Select Tester </div>
+              <div class="mr-2 ml-3 mt-2" style="color:#6C7293; ;">Select Tester </div>
             </div>
             <div class="col-md-8 ">
               <select id="" name="tname" class="drop form-control ml-3 mt-2 text-light" required
@@ -58,7 +58,7 @@
           </div>
           <div class="row pt-1">
             <div class="col-md-4">
-              <div class="mr-2 ml-3 mt-2" style="color:white ;">Select Task </div>
+              <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Select Task </div>
             </div>
             <div class="col-md-8 ">
               <select id="" name="task" class="drop form-control ml-3 mt-2 text-light" required
@@ -73,7 +73,7 @@
           </div>
           <div class="row pt-1">
             <div class="col-md-4">
-              <div class="mr-2 ml-3 mt-2" style="color:white ;">SubTask</div>
+              <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">SubTask</div>
             </div>
             <div class="col-md-8 ">
               <input type="text" name="subtask" class="drop form-control ml-3 mt-2 text-light" autocomplete="off" required
@@ -82,7 +82,7 @@
           </div>
           <div class="row pt-1">
             <div class="col-md-4">
-              <div class=" mr-2 ml-3 mt-2" style="color:white ;">Description</div>
+              <div class=" mr-2 ml-3 mt-2" style="color:#6C7293;">Description</div>
             </div>
             <div class="col-md-8 ">
               <textarea name="description" class="drop form-control ml-3 mt-2 text-light" required
@@ -91,7 +91,8 @@
           </div>
           <div class="row pt-1">
             <div class="col-md-4">
-              <div class=" mr-2 ml-3 mt-2 text-light" style="color:white ;">Date</div>
+              <div class=" mr-2 ml-3 mt-2" style="color:#6C7293;">Date</div>
+              
             </div>
             <div class="col-md-8 ">
               <div class="mt-2 mr-2 text-info"></div>
@@ -99,16 +100,16 @@
           </div>
           <div class="row pt-1">
             <div class="col-md-4">
-              <div class=" mr-2 ml-3 mt-2" style="color:white ;"></div>
+              <div class=" mr-2 ml-3 mt-2" style="color:#6C7293;"></div>
             </div>
             <div class="col-md-8 ">
               <input type="date" name="date" id="txtDate" class="drop form-control ml-3 mt-2 text-light" required
-                style="border:1px solid #6C7293 ;color:#6C7293;">
+                style="border:1px solid #6C7293 ;">
             </div>
           </div>
           <div class="row pt-1">
             <div class="col-md-4">
-              <div class="mr-2 ml-3 mt-2" style="color:white ;">Attach Files</div>
+              <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Attach Files</div>
             </div>
             <div class="col-md-8 ">
               <input type="file" name="files" class="form-control mt-2 "
