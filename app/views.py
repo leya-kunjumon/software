@@ -552,3 +552,177 @@ def hr_vacancy_list(request):
 
 def hr_vacancy_details(request):
      return render(request,'hr\hr_vacancy_details.html')
+
+#****************** Digital Marketing *************************************
+
+
+def digitalmarketing_card(request):
+    return render(request,'digitalmarketing\digitalmarketing_card.html')
+
+def marketingtl_Dashboard(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_Dashboard.html')
+
+def datacollector_Dashboard(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_Dashboard.html')
+
+def marketingexecutive_Dashboard(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_Dashboard.html')
+
+def datacollector_attendance(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_attendance.html')
+
+def datacollector_attendance_list(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_attendance_list.html')
+
+def datacollector_reportedissue(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_reportedissue.html')
+
+def datacollector_reportissue_form(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_reportissue_form.html')
+
+def datacollector_reportedissue_table(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_reportedissue_table.html')
+
+def marketingexecutive_attendance(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_attendance.html')
+
+def marketingexecutive_attendance_list(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_attendance_list.html')
+
+def marketingexecutive_reportedissue(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_reportedissue.html')
+
+def marketingexecutive_reportissue_form(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_reportissue_form.html')
+
+def marketingexecutive_reportedissue_table(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_reportedissue_table.html')
+
+def marketingtl_reportedissue(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_reportedissue.html')
+
+def marketingtl_reportissue_form(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_reportissue_form.html')
+
+def marketingtl_reportedissue_table(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_reportedissue_table.html')
+
+
+def marketingtl_attendance(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_attendance.html')
+
+def marketingtl_attendance_datacollector(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_attendance_datacollector.html')
+
+def marketingtl_attendance_executive(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_attendance_executive.html')
+
+def marketingtl_attendance_executiveview(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_attendance_executiveview.html')
+
+def marketingtl_attendance_datacollectorview(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_attendance_datacollectorview.html')
+
+def marketingtl_attendance_executiveview_list(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_attendance_executiverview_list.html')
+
+def marketingtl_attendance_datacollectorview_list(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_attendance_datacollectorview_list.html')
+
+def marketingtl_attendance_datacollectoradd(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_attendance_datacollectoradd.html')
+
+def marketingtl_attendance_executiveadd(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_attendance_executiveadd.html')
+
+def marketingtl_attendance_view(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_attendance_view.html')
+
+def marketingtl_attendance_view_list(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_attendance_view_list.html')
+
+def marketingtl_mytask(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_mytask.html')
+
+def marketingexecutive_mytask(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_mytask.html')
+
+def marketingtl_sharedtask(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_sharedtask.html')
+
+def datacollector_mytask(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_mytask.html')
+
+
+def marketingtl_products_table(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_products_table.html')
+
+def marketingtl_recruitments_table(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_recruitments_table.html')
+
+def marketingtl_products_details(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_products_details.html')
+
+def marketingtl_recruitments_details(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_recruitments_details.html')
+
+
+
+def datacollector_products_table(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_products_table.html')
+
+def datacollector_recruitments_table(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_recruitments_table.html')
+
+def datacollector_products_details(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_products_details.html')
+
+def datacollector_recruitments_details(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_recruitments_details.html')
+
+
+def marketingexecutive_products_table(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_products_table.html')
+
+def marketingexecutive_recruitments_table(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_recruitments_table.html')
+
+def marketingexecutive_products_details(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_products_details.html')
+
+def marketingexecutive_recruitments_details(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_recruitments_details.html')
+
+
+def marketingexecutive_products_data(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_products_data.html')
+
+def marketingexecutive_recruitments_data(request):
+    return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_recruitments_data.html')
+
+
+def datacollector_products_collectdata(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_products_collectdata.html')
+
+def datacollector_recruitments_collectdata(request):
+    return render(request,'digitalmarketing\datacollector\datacollector_recruitments_collectdata.html')
+
+
+def marketingtl_shtask_products_table(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_shtask_products_table.html')
+
+def marketingtl_shtask_recruitments_table(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_shtask_recruitments_table.html')
+
+def marketingtl_shtask_products_details(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_shtask_products_details.html')
+
+def marketingtl_shtask_recruitments_details(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_shtask_recruitments_details.html')
+
+def marketingtl_products_data(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_products_data.html')
+
+def marketingtl_recruitments_data(request):
+    return render(request,'digitalmarketing\marketingtl\marketingtl_recruitments_data.html')
+
