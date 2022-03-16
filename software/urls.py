@@ -23,8 +23,4 @@ urlpatterns = [
    path('tester_projectdetails', views.tester_projectdetails,name='tester_projectdetails'),
    
    
-   
-   
-
-   
 ]
