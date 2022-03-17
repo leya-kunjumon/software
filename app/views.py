@@ -607,7 +607,6 @@ def marketingtl_reportissue_form(request):
 def marketingtl_reportedissue_table(request):
     return render(request,'digitalmarketing\marketingtl\marketingtl_reportedissue_table.html')
 
-
 def marketingtl_attendance(request):
     return render(request,'digitalmarketing\marketingtl\marketingtl_attendance.html')
 
@@ -653,7 +652,6 @@ def marketingtl_sharedtask(request):
 def datacollector_mytask(request):
     return render(request,'digitalmarketing\datacollector\datacollector_mytask.html')
 
-
 def marketingtl_products_table(request):
     return render(request,'digitalmarketing\marketingtl\marketingtl_products_table.html')
 
@@ -665,8 +663,6 @@ def marketingtl_products_details(request):
 
 def marketingtl_recruitments_details(request):
     return render(request,'digitalmarketing\marketingtl\marketingtl_recruitments_details.html')
-
-
 
 def datacollector_products_table(request):
     return render(request,'digitalmarketing\datacollector\datacollector_products_table.html')
@@ -680,7 +676,6 @@ def datacollector_products_details(request):
 def datacollector_recruitments_details(request):
     return render(request,'digitalmarketing\datacollector\datacollector_recruitments_details.html')
 
-
 def marketingexecutive_products_table(request):
     return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_products_table.html')
 
@@ -693,20 +688,17 @@ def marketingexecutive_products_details(request):
 def marketingexecutive_recruitments_details(request):
     return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_recruitments_details.html')
 
-
 def marketingexecutive_products_data(request):
     return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_products_data.html')
 
 def marketingexecutive_recruitments_data(request):
     return render(request,'digitalmarketing\marketingexecutive\marketingexecutive_recruitments_data.html')
 
-
 def datacollector_products_collectdata(request):
     return render(request,'digitalmarketing\datacollector\datacollector_products_collectdata.html')
 
 def datacollector_recruitments_collectdata(request):
     return render(request,'digitalmarketing\datacollector\datacollector_recruitments_collectdata.html')
-
 
 def marketingtl_shtask_products_table(request):
     return render(request,'digitalmarketing\marketingtl\marketingtl_shtask_products_table.html')
