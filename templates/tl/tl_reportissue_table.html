@@ -1,141 +1,99 @@
 
 
-{%extends 'tl\tlDashboard.html'%} 
+{%extends 'tl\tl_base.html'%} 
 {%load static%}
 {%block content%}
- <body>
-  <style>
-    * {
-    color: #6C7293;
-  }
 
-  .table1 {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5vh;
-  }
 
-  th,
-  td {
-    text-align: center;
-  }
-
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 5px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #191c24;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-
-  .card-title {
-    font-size: 20px;
-    font-weight: 900px;
-  }
-  </style>
-  <div class="row">
-    <div class="  " style="font-size: 20px;font-weight: 600;opacity: 0.9;color: #6c7293">REPORTED &nbsp;
-      ISSUES</div>
-  </div>
-  <div class="row">
-    <div class="col-10 grid-margin table1">
-      <div class="card ">
+<div class="row">
+  <div class="col-12 col-sm-1 col-md-1 col-lg-1"></div>
+  <div class="col-12 col-sm-10 col-md-10 col-lg-10 ">
+    <div class="text-light pt-4  " style="font-size: 20px;font-weight: 600;opacity: 0.9;">REPORTED ISSUES</div>
+      <div class="card pt-2">
         <div class="card-body">
-           
-          <input type="text" id="search" class="form-control" placeholder="search..." onkeyup="myFunction()" style="color: white !important;">
+  
+          <input type="text" class="form-control text-light" onkeyup="myFunction()" id="search" name="search" autocomplete="off" placeholder="Search...">
           <br>
           <div class="table-responsive">
-            <table class="table table-dark " id="myTable">
+            <table class="table" id="myTable">
               <thead>
                 <tr>
-                  
-                  <th class="text-ash"> S.No </th>
-                  <th class="text-ash"> Name </th>
-                  <th class="text-ash"> Designation</th>
-                  <th class="text-ash">  Date </th>
-                  <th class="text-ash"> Action</th>
+                
+                  <th> Sl.No </th>
+                  <th> Name </th>
+                  <th> Designation</th>
+                  <th> Issue</th>
+                  <th>  Date </th>
+                  <th> Action</th>
   
   
                 </tr>
               </thead>
-             
+              
               <tbody>
   
                 <tr>
                     <td>1</td>
-                    <td>anandhu</td>
+                    <td>Developer1</td>
                     <td>programer</td>
-                    <td>15/30/2022</td>
-                    <td><a href="{% url 'tl_reportissue_submit' %}">
-                        <div class="badge badge-outline-success">Submitted</div>
-                      </a></td>
-
-
-                  
-                  
-                  
+                    <td>network error</td>
+                    <td>20-03-2022</td>
+                    <td><a href="#">
+                      <div class="badge badge-outline-warning">Pending</div></a>
+                    </a></td>
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td>anu</td>
+                    <td>3</td>
+                    <td>Developer2</td>
                     <td>programer</td>
-                    <td>15/30/2022</td>
-                    <td><a href="#">
-                        <div class="badge badge-outline-warning">Pending</div></a>
-                      </a></td>
-
-
-                  
-                  
-                  
+                    <td>network error</td>
+                    <td>20-03-2022</td>
+                    <td><a href="{% url 'tl_reportissue_submit' %}">
+                      <div class="badge badge-outline-success">Submitted</div>
+                    </a></td>
                 </tr>
-  
+                <tr>
+                    <td>3</td>
+                    <td>Developer3</td>
+                    <td>programer</td>
+                    <td>network error</td>
+                    <td>20-03-2022</td>
+                    <td><a href="{% url 'tl_reportissue_submit' %}">
+                      <div class="badge badge-outline-success">Submitted</div>
+                    </a></td>
+                </tr> 
                 
               </tbody>
-             
+              
             </table>
           </div>
         </div>
       </div>
-    </div>
   </div>
-   
-  <script>
-    function myFunction() {
-     var input, filter, table, tr, td, i, txtValue;
-     input = document.getElementById("search");
-     filter = input.value.toUpperCase();
-     table = document.getElementById("myTable");
-     tr = table.getElementsByTagName("tr");
-     for (i = 0; i < tr.length; i++) {
-       td = tr[i].getElementsByTagName("td")[1];
-       if (td) {
-         txtValue = td.textContent || td.innerText;
-         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-           tr[i].style.display = "";
-         } else {
-           tr[i].style.display = "none";
-         }
+</div>
+</div>
+</div>
+
+
+<script>
+  function myFunction() {
+   var input, filter, table, tr, td, i, txtValue;
+   input = document.getElementById("search");
+   filter = input.value.toUpperCase();
+   table = document.getElementById("myTable");
+   tr = table.getElementsByTagName("tr");
+   for (i = 0; i < tr.length; i++) {
+     td = tr[i].getElementsByTagName("td")[1];
+     if (td) {
+       txtValue = td.textContent || td.innerText;
+       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+         tr[i].style.display = "";
+       } else {
+         tr[i].style.display = "none";
        }
      }
    }
-   </script>
-  
-  
-
-</body>
-</html>
+ }
+ </script>
 
 {%endblock%}

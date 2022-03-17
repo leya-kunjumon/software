@@ -1,18 +1,12 @@
-
-{%extends 'tl\tlDashboard.html'%} 
+{%extends 'tl\tl_base.html'%}
 {%load static%}
 {%block content%}
 
 <style>
-  .Search {
-    margin-top: 4%;
-    float: left;
-    margin-right: 5%;
-    padding-left: 3%;
-    padding-right: 3%;
-    line-height: 2;
+  #choose::file-selector-button {
+    background-color: rgb(37, 125, 207);
 
-    width: 95px;
+
   }
 </style>
 
@@ -39,7 +33,7 @@
           </thead>
           <tbody>
 
-          
+
 
             <tr>
               <td style="color:#6C7293;">core module</td>
@@ -63,7 +57,7 @@
                 </div>
               </td>
             </tr>
-           
+
 
           </tbody>
         </table>
@@ -74,7 +68,7 @@
 
 
       <span class="">
-<br>
+        <br>
 
         <i class="material-icons pt-2" style="color:#6C7293;">assignment</i>&nbsp;&nbsp;&nbsp; <a
           href="{% url 'tl_addtask' %}" style="text-decoration:none;">Add a sub task</a>
@@ -93,103 +87,100 @@
 
 
 <!-- pop up window for Project details -->
+
 <form action="#" method="post">
-  
-<div class="row modal fade" id="projectdetails{{i.id}}">
-  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-    <div class="modal-content modal-xl" style="background-color: #191c24;">
-      <div class="modal-header" style="border-bottom: 0 none;">
-        <h5 class="modal-title text-info">Sub Tasks</h5>
-        <button type="button" class="close text-light" data-dismiss="modal" aria-label=""
-          style="background-color: #191c24;border:none;font-size: 20px;">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      
-      <div class="card ">
-        <div class="card-body">
+  <input type="hidden" name="csrfmiddlewaretoken"
+    value="4WliCRPIqtWtHTzKdk8gIm2EhMycJF4ws43vM7vKOrD1FF8ujTuC4S23r24S3pw6">
+  <div class="rowmt-5 modal fade" id="projectdetails{{i.id}}">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+      <div class="modal-content modal-xl" style="background-color: #191c24;">
+        <div class="card ">
+          <div class="card-body">
+            <div class="container">
+              <button type="button" class="close text-light" data-dismiss="modal" aria-label=""
+                style="background-color: #191c24;border:none; float: right; font-size: 20px;">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="text-info" style="font-size: 20px;font-weight: 600;">Sub Tasks</div>
 
-          
-            <div class="row ">
-              <div class="col-md-1"></div>
-              <div class="col-md-2 mt-2" style="color:#6C7293;">Start date</div>
-              <div class="col-md-2 mt-2">
-                <div class="ml-3" style="color:#6C7293;">16/03/2022</div>
+              <div class="row mt-5">
+                <div class=" col-lg-1"></div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-2 mt-2" style="color:white;">Start date</div>
+                <div class=" col-6 col-sm-6 col-md-6 col-lg-2 mt-2">
+                  <div class="ml-3" style="color:white;">09-03-2022</div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class=" col-6 col-sm-6 col-md-6 col-lg-2 mt-2" style="color:white;"> End date</div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-2 mt-2" style="color:white;"> 24-03-2022</div>
+                <div class="col-md-1"></div>
               </div>
-              <div class="col-md-2"></div>
-              <div class="col-md-2 mt-2" style="color:#6C7293;"> 16/03/2022</div>
-              <div class="col-md-2 mt-2" style="color:#6C7293;"> 16/03/2022</div>
+            </div>
+
+            <div class="row mt-5 ml-2">
+              <div class="col-lg-1"></div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2 mt-2" style="color:white;">Assigned to</div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2 mt-2">
+                <div style="color:white;"> anandhu a </div>
+              </div>
+              <div class="col-lg-1"></div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2 mt-2 " style="color:white;">Progress</div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2 mt-2 "> <span class="progress" data-toggle="modal"
+                  data-target="" style="border-radius:5px;height:20px;max-width:150px;background-color:#C2F0EB">
+                  <span class="progress-bar" style="height:20px;width:100%">100%</span></div>
               <div class="col-md-1"></div>
             </div>
 
-
-            <div class="row mt-3">
-              <div class="col-md-1"></div>
-              <div class="col-md-2 mt-2" style="color:#6C7293;">Assigned to</div>
-              <div class="col-md-2 mt-2">
-                <div style="color:#6C7293;">ammu</div>
-              </div>
-              <div class="col-md-2"></div>
-              <div class="col-md-2 mt-2" style="color:#6C7293;">Progress</div>
-              <div class="col-md-2 mt-2"> <span class="progress" data-toggle="modal" data-target=""
-                  style="border-radius:5px;height:20px;background-color:#C2F0EB">
-                  <span class="progress-bar" style="height:20px;">{{i.progress}}%</span></div>
-              <div class="col-md-1"></div>
-            </div>
-
-            <div class="row mt-3">
-              <div class="col-md-1"></div>
-              <div class="col-md-2 mt-2" style="color:#6C7293;">Status</div>
-              <div class="col-md-2 mt-2">
-                <select class="drop form-control ml-3 mt-2 text-light" style="border:1px solid #6C7293 ;" name="prostatus" required>
+            <div class="row mt-5">
+              <div class="col-lg-1"></div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2 mt-2" style="color:white;">Status</div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2 mt-2">
+                <select name="devstat" class="drop form-control ml-3 mt-2 text-light" required>
                   <option value=""> </option>
-                  <option value="in progress" class="text-light mt-2" style="color:#6C7293;">in progress</option>
-                  <option value="completed" class="text-light mt-2" style="color:#6C7293;">completed</option>
+                  <option value="In progress" class="text-light" style="color:white;">in progress</option>
+                  <option value="Completed" class="text-light" style="color:white;">completed</option>
                 </select>
               </div>
-              <div class="col-md-2"></div>
-              <div class="col-md-2 mt-2" style="color:#6C7293;">Current status</div>
-              <div class="col-md-2 mt-2" style="color:#6C7293;"> {{i.projectstatus}}</div>
+              <div class="col-lg-1"></div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2" style="color:white;">Current status</div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2" style="color:white;"> in progress</div>
               <div class="col-md-1"></div>
             </div>
 
-            <div class="row mt-3">
-              <div class="col-md-1"></div>
-              <div class="col-md-2 mt-1 mt-2" style="color:#6C7293;">Progress</div>
-              <div class="col-md-2 mt-1 mt-2">
-                <input type="text" name="progress" class="form-control text-light" autocomplete="off" style="border:1px solid #6C7293 ;">
+            <div class="row mt-5">
+              <div class="col-lg-1"></div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2 mt-1" style="color:white;">Progress</div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2 mt-1">
+                <input name="devpro" type="text" class="form-control text-light">
+                <br>
               </div>
-              <div class="col-md-2"></div>
-              <div class="col-md-2"></div>
-              <div class="col-md-2 mt-2"> <button type="submit" id="alert2" class="btn-primary Search">Start
-                  work</button>
+
+              <div class="col-lg-1"></div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2"></div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-2">
+                <button type="submit" class="btn-primary text-light">Start work</button>
               </div>
-              <div class="col-md-1"></div>
+              <div class="col-lg-1"></div>
             </div>
+
+          </div>
+
 
         </div>
 
+        <div class="container mt-3 " style="border-top:1px solid grey;">
+          <div class="text-info pt-4" style="font-size: 20px;font-weight: 600;">Project description</div>
+          <div class="pt-3 " style="margin-left:20px;color:white;">create a respnsive front end</div>
+        </div>
 
+        <div class="container mt-3" style="border-top:1px solid grey;border-bottom:1px solid grey;">
+          <div class="text-info pt-4 pb-2" style="font-size: 20px;font-weight: 600;">Attach files</div>
+          <a href="#" download class="text-info " style="text-decoration:none;margin-left:20px;">Download</a>
+        </div>
+        <br><br>
       </div>
-
-      <div class="container mt-1 " style="border-top:1px solid grey;">
-        <div class="text-info pt-4" style="font-size: 20px;font-weight: 600;">Project description</div>
-        <div class="pt-3 " style="margin-left:20px;color: white;">{{i.description}}</div>
-      </div>
-
-      <div class="container mt-3" style="border-top:1px solid grey;border-bottom:1px solid grey;">
-        <div class="text-info pt-4 pb-2" style="font-size: 20px;font-weight: 600;">Attach files</div>
-        <a href="{{i.projectfiles.url}}" download class="text-info " style="text-decoration:none;margin-left:20px;">Download</a>
-        <br>
-        <br>
-      </div>
-      <br>
-      <br>
     </div>
   </div>
-</div>
 </form>
-
 
 <!-- pop up window for extension status -->
 
@@ -209,22 +200,22 @@
         <div class="card-body">
 
           <form action="#" method="post">
-           
+
 
             <div class="row ">
               <div class="col-md-4">
                 <div class=" mr-2 ml-3 mt-2" style="color:#6C7293;">Requested Days</div>
               </div>
               <div class="col-md-8 ">
-                
-               
-                <input type="text" value="" class="drop form-control ml-3 mt-2" required
-                style="border:1px solid #6C7293 ;">
-                
-                 
+
+
+                <input type="text" value="" class="drop form-control text-light ml-3 mt-2" required
+                  style="border:1px solid #6C7293 ;">
+
+
                 <input type="text" value="{{i.extension}}" class="drop form-control ml-3 mt-2" required
                   style="border:1px solid #6C7293 ;">
-                
+
               </div>
             </div>
             <div class="row pt-1">
@@ -232,14 +223,14 @@
                 <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Reason</div>
               </div>
               <div class="col-md-8 ">
-                
-                
-           
+
+
+
                 <textarea class="form-control  ml-3 mt-2"
-                style="height:70px;border:1px solid #6C7293 ;">{{i.extension_reason}}</textarea>
-               
-                  
-                
+                  style="height:70px;border:1px solid #6C7293 ;">{{i.extension_reason}}</textarea>
+
+
+
               </div>
             </div>
             <div class="row pt-1">
@@ -247,12 +238,12 @@
                 <div class=" mr-2 ml-3 mt-2" style="color:#6C7293;">Previous Status</div>
               </div>
               <div class="col-md-8 ">
-               
-                <div class="mr-2 ml-3 mt-2" style="color:#6C7293;"></div>
-                
 
-               <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">{{i.extension_status}} on {{i.extension_date}}</div>
-                
+                <div class="mr-2 ml-3 mt-2" style="color:#6C7293;"></div>
+
+
+                <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">{{i.extension_status}} on {{i.extension_date}}</div>
+
               </div>
             </div>
             <div class="row">
@@ -284,7 +275,7 @@
       </div>
       <div class="table-responsive mt-3 mb-3 container">
         <table class="table  table-bordered ">
-          <thead style="background-color: black;">
+          <thead>
             <tr>
               <th scope="col" style="color:#6C7293;">Date</th>
               <th scope="col" style="color:#6C7293;">ReportBy</th>
@@ -295,10 +286,10 @@
             </tr>
           </thead>
           <tbody>
-            
-           
-              
-              
+
+
+
+
             <tr>
               <td style="color:#6C7293;"> 16/03/2022 </td>
               <td style="color:#6C7293;"> anu </td>
@@ -309,7 +300,7 @@
                   <div class="badge badge-outline-info">Download</div>
                 </a></td>
             </tr>
-         
+
         </table>
       </div>
     </div>
@@ -331,7 +322,7 @@
       </div>
       <div class="table-responsive mt-3 mb-3 container">
         <table class="table  table-bordered ">
-          <thead style="background-color: black;">
+          <thead>
             <tr>
               <th scope="col" style="color:#6C7293;">Date</th>
               <th scope="col" style="color:#6C7293;">ReportBy</th>
@@ -343,7 +334,7 @@
           </thead>
           <tbody>
 
-           
+
             <tr>
               <td style="color:#6C7293;">17/03/2022 </td>
               <td style="color:#6C7293;">anandhu</td>
@@ -354,7 +345,7 @@
                   <div class="badge badge-outline-info">Download</div>
                 </a></td>
             </tr>
-           
+
           </tbody>
         </table>
       </div>

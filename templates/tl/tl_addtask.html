@@ -1,15 +1,11 @@
-{%extends 'tl\tlDashboard.html'%} 
+{%extends 'tl\tl_base.html'%} 
 {%load static%}
 {%block content%}
 <style>
-  .Search {
-    margin-top: 4%;
-    float: right;
-    margin-right: 5%;
-    padding-left: 3%;
-    padding-right: 3%;
-    line-height: 2;
-
+  #choose::file-selector-button {
+      background-color: rgb(37, 125, 207);
+      
+      
   }
 </style>
 
@@ -112,7 +108,7 @@
               <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Attach Files</div>
             </div>
             <div class="col-md-8 ">
-              <input type="file" name="files" class="form-control mt-2 "
+              <input type="file" id="choose" name="files" class="form-control mt-2 "
                 style="text-decoration:none;border:none;background-color: #191c24;color:#6C7293 ;">
             </div>
           </div>

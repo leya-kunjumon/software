@@ -1,5 +1,5 @@
 
-{%extends 'tl\tlDashboard.html'%} 
+{%extends 'tl\tl_base.html'%} 
 {%load static%}
 {%block content%}
 
@@ -18,19 +18,19 @@
 
   <div class="row " style="padding-top:20px;">
 
-    <div class="col-md-4 col-lg-4 col-10  grid-margin">
+    <div class="col-md-4 col-lg-4 col-12  grid-margin">
       <div class="card" style="max-height: 250px">
         <a href="#" style="text-decoration: none;">
           <div class="card-body">
             <a href="{% url 'tl_reportissue_table' %}" style="text-decoration: none">
 
               <div class="row" style="padding-top:10px;">
-                <div class="col-12 col-sm-12 col-lg-8 my-auto">
+                <div class="col-8 col-sm-8 col-lg-8 my-auto">
                   <div class="d-flex d-sm-block d-md-flex align-items-center">
-                    <h3 class="mb-0" style="color:white;">Reported issues</h3>
+                    <h4 class="mb-0" style="color:white;">Reported issues</h4>
                   </div>
                 </div>
-                <div class="col-12 col-sm-12 col-lg-4 text-center text-xl-right">
+                <div class="col-4 col-sm-4 col-lg-4 text-center text-xl-right">
                   <i class="icon-lg mdi mdi-archive text-primary ms-auto"></i>
                 </div>
               </div>
@@ -45,12 +45,12 @@
 
           <div class="card-body">
             <div class="row" style="padding-top:10px;">
-              <div class="col-12 col-sm-12 col-lg-8 my-auto">
+              <div class="col-8 col-sm-8 col-lg-8 my-auto">
                 <div class="d-flex d-sm-block d-md-flex align-items-center">
-                  <h3 class="mb-0" style="color:white;">Report an issue</h3>
+                  <h4 class="mb-0" style="color:white;">Report an issue</h4>
                 </div>
               </div>
-              <div class="col-12 col-sm-12 col-lg-4 text-center text-xl-right">
+              <div class="col-4 col-sm-4 col-lg-4 text-center text-xl-right">
                 <i class="icon-lg mdi mdi-arrange-send-to-back text-warning ms-auto"></i>
               </div>
             </div>
@@ -64,12 +64,12 @@
 
           <div class="card-body">
             <div class="row" style="padding-top:10px;">
-              <div class="col-12 col-sm-12 col-lg-8 my-auto">
+              <div class="col-8 col-sm-8 col-lg-8 my-auto">
                 <div class="d-flex d-sm-block d-md-flex align-items-center">
-                  <h3 class="mb-0" style="color:white;">Developer Report</h3>
+                  <h4 class="mb-0" style="color:white;">Developer Report</h4>
                 </div>
               </div>
-              <div class="col-12 col-sm-12 col-lg-4 text-center text-xl-right">
+              <div class="col-8 col-sm-4 col-lg-4 text-center text-xl-right">
                 <i class="icon-lg mdi mdi-bitbucket text-danger ms-auto"></i>
               </div>
             </div>

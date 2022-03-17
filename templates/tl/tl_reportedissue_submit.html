@@ -1,6 +1,8 @@
-{%extends 'tl\tlDashboard.html'%} 
+{%extends 'tl\tl_base.html'%} 
 {%load static%}
 {%block content%}
+
+
 <style>
   #head {
     color: #6c7293;
@@ -35,56 +37,64 @@
   * {
     color: #6C7293;
   }
-  .table1 {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5vh;
-  }
 </style>
 
 
 <div class="row">
-  <div class="  " style="font-size: 20px;font-weight: 600;opacity: 0.9;color: #6c7293">REPORTED
-    ISSUES</div>
+  <div class="  " style="font-size: 20px;font-weight: 600;opacity: 0.9;color: #6c7293">Reported
+    Issues</div>
 </div>
 <br>
-<div class="row mt-3 ">
-  <div class="col-8 grid-margin table1">
-      <div id="" class="container shadow mt-3  " style="border-radius:5px;background-color: #191c24; ">
-          <div class="row p-3">
-              <div class="col-12">
-                 
-                 <img src="{% static 'circle.png'%}" width="30" height="25"><span class=""
-                 style="color: white; font-size: 20px;font-weight: 400;padding-left: 20px;"> TL module issue reported by Anandhu
-              </div>
-          </div>
-              <div class="card">
-                 <div class="card-body">
-                        report submit
-                 </div>
-          </div>
-      </div>
-  </div>
-  
-  <div class="col-8 grid-margin table1">
 
-     <div id="" class="container shadow mt-3  " style="border-radius:5px;background-color: #191c24; ">
-         <div class="row p-3">
-             <div class="col-12">
-                 <img src="{% static 'circle.png'%}" width="30" height="25"><span class="" style="float:right;color: white; font-size: 20px;font-weight: 400;padding-right: 10px;"> Action
-                   taken &nbsp;</span>
-              </div>
-        
-              <div class="card">
-                  <div class="card-body ">
-          
-                       issue verified
-                  </div>
-              </div>
+
+
+<div class="row mt-3 ">
+
+
+  <div class="col-md-12">
+
+
+    <div id="" class="container shadow mt-3  " style="border-radius:5px;background-color: #191c24; ">
+      <div class="row p-3">
+        <div class="col-12">
+          <img src="{% static 'circle.png'%}" width="30" height="25"><span class=""
+            style="color: white; font-size: 18px;font-weight: 400;padding-left: 20px;">Issue Reported by {{reported_issue.reporter}} Developer
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card p-0 text-justify" style="border:none !important" >
+          <div class="card-body text-justify " style="padding-top:30px;padding-left:0%;padding-right:0%;">
+             <p style="font-size:14px;text-align:justify">Fever</p>
           </div>
         </div>
+      </div>
+    </div>
   </div>
-</div> 
+  <div class="col-md-12 ">
+
+    <div id="" class="container shadow mt-3  " style="border-radius:5px; background-color: #191c24;">
+      <div class="row p-3">
+        
+        <div class="col-md-12">
+
+
+          <span class="" style="float:right;color: white; font-size: 18px;font-weight: 400;padding-right: 10px;"> Action
+            Taken &nbsp;<img src="{% static 'circle.png'%}" width="30" height="25"></span>
+
+          <!-- <img src="{% static 'img/y.png'%}" width="70" height="50" ><span class="" style="opacity:0.8;font-size: 20px;font-weight: 600;">action taken</div> -->
+        </div>
+        <div class="card" style="border:none !important">
+          <div class="card-body  text-justify" style="padding-top:30px;padding-left:0%;padding-right:0%;">
+             <p style="font-size:14px;text-align:justify">OK</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </div>
 
 
 {% endblock %}
