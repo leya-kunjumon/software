@@ -352,6 +352,29 @@ urlpatterns = [
     path('trainer_attendance_trainees_viewattendance/', training_views.trainer_attendance_trainees_viewattendance, name='trainer_attendance_trainees_viewattendance'),
     path('trainer_attendance_trainees_viewattendancelist/', training_views.trainer_attendance_trainees_viewattendancelist, name='trainer_attendance_trainees_viewattendancelist'),    
     path('trainer_attendance_trainees_addattendance/', training_views.trainer_attendance_trainees_addattendance, name='trainer_attendance_trainees_addattendance'),
-
+    
+    # ****************************  Trainee   ******************************
+    path('trainee_dashboard_trainee/',training_views.trainee_dashboard_trainee,name="views.trainee_dashboard_trainee"),
+    path('trainee_task/', training_views.trainee_task, name='trainee_task'),
+    path('trainee_completedTask/', training_views.trainee_completedTask, name='trainee_completedTask'),
+    path('trainee_task_list/', training_views.trainee_task_list, name='trainee_task_list'),
+    path('trainee_task_details/', training_views.trainee_task_details, name='trainee_task_details'),    
+    path('trainee_completed_taskList/',training_views.trainee_completed_taskList, name='trainee_completed_taskList'),
+    path('trainee_completed_details/', training_views.trainee_completed_details, name='trainee_completed_details'), 
+    path('trainee_topic/', training_views.trainee_topic, name='trainee_topic'),
+    path('trainee_currentTopic/', training_views.trainee_currentTopic, name='trainee_currentTopic'),
+    path('trainee_previousTopic/', training_views.trainee_previousTopic, name='trainee_previousTopic'),
+    path('trainee_reported_issue/',training_views.trainee_reported_issue, name='trainee_reported_issue'),
+    path('trainee_report_reported/',training_views.trainee_report_reported,name='trainee_report_reported'),
+    path('trainee_report_issue/', training_views.trainee_report_issue,name='trainee_report_issue'),
+    path('trainee_applyleave_form/', training_views.trainee_applyleave_form,name='trainee_applyleave_form'),
+    path('trainee_applyleave_card/',training_views.trainee_applyleave_card, name='trainee_applyleave_card'),
+    path('trainee_appliedleave/', training_views.trainee_appliedleave,name='trainee_appliedleave'),
+    path('attendance/', training_views.Attendance, name='attendance'),
+    path('trainees_attendance_viewattendance/',training_views.trainees_attendance_viewattendance, name='trainees_attendance_viewattendance'),
+    path('trainees_attendance_viewattendancelist/',training_views.trainees_attendance_viewattendancelist, name='trainees_attendance_viewattendancelist'),
+    path('trainee_payment/', training_views.trainee_payment,name='trainee_payment'),
+    path('trainee_payment_addpayment/',training_views.trainee_payment_addpayment,name='trainee_payment_addpayment'),
+    path('trainee_payment_viewpayment/', training_views.trainee_payment_viewpayment,name='trainee_payment_viewpayment'),
 
 ]

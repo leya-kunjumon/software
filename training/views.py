@@ -236,3 +236,73 @@ def trainer_attendance_trainees_viewattendancelist(request):
 
 def trainer_attendance_trainees_addattendance(request):
     return render(request,'training/trainer/trainer_attendance_trainees_addattendance.html')
+    
+#******************  Trainee  *****************************
+
+def trainee_dashboard_trainee(request):
+    return render(request,'training/trainee/trainee_dashboard_trainee.html')
+    
+def trainee_task(request):
+   return render(request,'training/trainee/trainee_task.html')   
+
+def trainee_task_list(request):
+    return render(request,'training/trainee/trainee_task_list.html')
+
+def trainee_task_details(request):
+    return render(request,'training/trainee/trainee_task_details.html')
+
+def trainee_completed_taskList(request):
+   return render(request,'training/trainee/trainee_completed_taskList.html')
+
+def trainee_completedTask(request):
+    return render(request,'training/trainee/trainee_completedTask.html')
+
+def trainee_completed_details(request):
+    return render(request,'training/trainee/trainee_completed_details.html')
+
+def trainee_topic(request):
+    return render(request, 'training/trainee/trainee_topic.html')
+
+def trainee_currentTopic(request):
+    return render(request, 'training/trainee/trainee_currentTopic.html')
+    
+def trainee_previousTopic(request):
+    return render(request, 'training/trainee/trainee_previousTopic.html')
+
+def trainee_reported_issue(request):
+    return render(request, 'training/trainee/trainee_reported_issue.html')
+   
+def trainee_report_reported(request):
+    return render(request, 'training/trainee/trainee_report_reported.html')
+  
+def trainee_report_issue(request):
+    return render(request, 'training/trainee/trainee_report_issue.html')
+
+def trainee_applyleave_form(request):
+    return render(request, 'training/trainee/trainee_applyleave_form.html')  
+
+def trainee_applyleave_card(request):
+     return render(request, 'training/trainee/trainee_applyleave_cards.html')
+    
+def trainee_appliedleave(request):
+     return render(request, 'training/trainee/trainee_appliedleave.html')
+    
+def Attendance(request):
+   return render(request,'training/trainee/trainees_attendance.html')
+    
+def trainees_attendance_viewattendance(request):
+    return render(request,'training/trainee/trainees_attendance_viewattendance.html')
+ 
+def trainees_attendance_viewattendancelist(request):
+   return render(request,'training/trainee/trainees_attendance_viewattendancelist.html')
+   
+def trainee_payment(request):
+   return render(request,'training/trainee/trainee_payment.html')
+   
+def trainee_payment_addpayment(request):
+   return render(request,'training/trainee/trainee_payment_addpayment.html')
+  
+def trainee_payment_viewpayment(request):
+     return render(request,'training/trainee/trainee_payment_viewpayment.html')
+                
+  
