@@ -1,10 +1,10 @@
 from django.shortcuts import render
 # Create your views here. 
 def index(request):
-    return render(request,'index.html')
+    return render(request,'training\index.html')
     
-def trainings(request):
-    return render(request,'training\training.html')
+def Trainings(request):
+    return render(request,'training\Training.html')
 
 #***********************course**************************************************
 

@@ -1,11 +1,15 @@
 from django.contrib import admin
 from django.urls import path
 from app import views
-from training import views
+from training import views as training_views
+
+# from mysite.books import views as books_views
+# from mysite.contact import views as contact_views
+
 urlpatterns = [
 
     path('', views.index, name='index'),
-    path('employees/', views.employees, name='employees'),
+    path('employees/',views.employees, name='employees'),
     path('software/', views.software, name='software'),
 
     # ***********************developer***********************************************
@@ -236,105 +240,43 @@ urlpatterns = [
     path('marketingtl_attendance_executiveview_list/', views.marketingtl_attendance_executiveview_list,name="marketingtl_attendance_executiveview_list"),
     path('marketingtl_attendance_datacollectoradd/', views.marketingtl_attendance_datacollectoradd,name="marketingtl_attendance_datacollectoradd"),
     path('marketingtl_attendance_executiveadd/', views.marketingtl_attendance_executiveadd,name="marketingtl_attendance_executiveadd"),
-    path('marketingtl_attendance_view/', views.marketingtl_attendance_view,
-         name="marketingtl_attendance_view"),
-
-    path('marketingtl_attendance_view_list/', views.marketingtl_attendance_view_list,
-         name="marketingtl_attendance_view_list"),
-
-    path('marketingtl_mytask/', views.marketingtl_mytask,
-         name="marketingtl_mytask"),
-
-    path('marketingexecutive_mytask/', views.marketingexecutive_mytask,
-         name="marketingexecutive_mytask"),
-
-    path('marketingtl_sharedtask/', views.marketingtl_sharedtask,
-         name="marketingtl_sharedtask"),
-
-    path('datacollector_mytask/', views.datacollector_mytask,
-         name="datacollector_mytask"),
-
-
-    path('marketingtl_products_table/', views.marketingtl_products_table,
-         name="marketingtl_products_table"),
-
-    path('marketingtl_recruitments_table/', views.marketingtl_recruitments_table,
-         name="marketingtl_recruitments_table"),
-
-    path('marketingtl_products_details/', views.marketingtl_products_details,
-         name="marketingtl_products_details"),
-
-    path('marketingtl_recruitments_details/', views.marketingtl_recruitments_details,
-         name="marketingtl_recruitments_details"),
-
-
-    path('datacollector_products_table/', views.datacollector_products_table,
-         name="datacollector_products_table"),
-
-    path('datacollector_recruitments_table/', views.datacollector_recruitments_table,
-         name="datacollector_recruitments_table"),
-
-    path('datacollector_products_details/', views.datacollector_products_details,
-         name="datacollector_products_details"),
-
-    path('datacollector_recruitments_details/', views.datacollector_recruitments_details,
-         name="datacollector_recruitments_details"),
-
-
-    path('marketingexecutive_products_table/', views.marketingexecutive_products_table,
-         name="marketingexecutive_products_table"),
-
-    path('marketingexecutive_recruitments_table/', views.marketingexecutive_recruitments_table,
-         name="marketingexecutive_recruitments_table"),
-
-    path('marketingexecutive_products_details/', views.marketingexecutive_products_details,
-         name="marketingexecutive_products_details"),
-
-    path('marketingexecutive_recruitments_details/', views.marketingexecutive_recruitments_details,
-         name="marketingexecutive_recruitments_details"),
-
-
-    path('marketingexecutive_products_data/', views.marketingexecutive_products_data,
-         name="marketingexecutive_products_data"),
-
-    path('marketingexecutive_recruitments_data/', views.marketingexecutive_recruitments_data,
-         name="marketingexecutive_recruitments_data"),
-
-
-    path('datacollector_products_collectdata/', views.datacollector_products_collectdata,
-         name="datacollector_products_collectdata"),
-
-    path('datacollector_recruitments_collectdata/', views.datacollector_recruitments_collectdata,
-         name="datacollector_recruitments_collectdata"),
-
-
-    path('marketingtl_shtask_products_table/', views.marketingtl_shtask_products_table,
-         name="marketingtl_shtask_products_table"),
-
-    path('marketingtl_shtask_recruitments_table/', views.marketingtl_shtask_recruitments_table,
-         name="marketingtl_shtask_recruitments_table"),
-
-    path('marketingtl_shtask_products_details/', views.marketingtl_shtask_products_details,
-         name="marketingtl_shtask_products_details"),
-
-    path('marketingtl_shtask_recruitments_details/', views.marketingtl_shtask_recruitments_details,
-         name="marketingtl_shtask_recruitments_details"),
-
-
-    path('marketingtl_products_data/', views.marketingtl_products_data,
-         name="marketingtl_products_data"),
-
-    path('marketingtl_recruitments_data/', views.marketingtl_recruitments_data,
-         name="marketingtl_recruitments_data"),
- 
+    path('marketingtl_attendance_view/', views.marketingtl_attendance_view,name="marketingtl_attendance_view"),
+    path('marketingtl_attendance_view_list/', views.marketingtl_attendance_view_list,name="marketingtl_attendance_view_list"),
+    path('marketingtl_mytask/', views.marketingtl_mytask,name="marketingtl_mytask"),
+    path('marketingexecutive_mytask/', views.marketingexecutive_mytask,name="marketingexecutive_mytask"),
+    path('marketingtl_sharedtask/', views.marketingtl_sharedtask,name="marketingtl_sharedtask"),
+    path('datacollector_mytask/', views.datacollector_mytask,name="datacollector_mytask"),
+    path('marketingtl_products_table/', views.marketingtl_products_table,name="marketingtl_products_table"),
+    path('marketingtl_recruitments_table/', views.marketingtl_recruitments_table,name="marketingtl_recruitments_table"),
+    path('marketingtl_products_details/', views.marketingtl_products_details,name="marketingtl_products_details"),
+    path('marketingtl_recruitments_details/', views.marketingtl_recruitments_details,name="marketingtl_recruitments_details"),
+    path('datacollector_products_table/', views.datacollector_products_table,name="datacollector_products_table"),
+    path('datacollector_recruitments_table/', views.datacollector_recruitments_table,name="datacollector_recruitments_table"),
+    path('datacollector_products_details/', views.datacollector_products_details,name="datacollector_products_details"),
+    path('datacollector_recruitments_details/', views.datacollector_recruitments_details,name="datacollector_recruitments_details"),
+    path('marketingexecutive_products_table/', views.marketingexecutive_products_table,name="marketingexecutive_products_table"),
+    path('marketingexecutive_recruitments_table/', views.marketingexecutive_recruitments_table,name="marketingexecutive_recruitments_table"),
+    path('marketingexecutive_products_details/', views.marketingexecutive_products_details,name="marketingexecutive_products_details"),
+    path('marketingexecutive_recruitments_details/', views.marketingexecutive_recruitments_details,name="marketingexecutive_recruitments_details"),
+    path('marketingexecutive_products_data/', views.marketingexecutive_products_data,name="marketingexecutive_products_data"),
+    path('marketingexecutive_recruitments_data/', views.marketingexecutive_recruitments_data,name="marketingexecutive_recruitments_data"),
+    path('datacollector_products_collectdata/', views.datacollector_products_collectdata,name="datacollector_products_collectdata"),
+    path('datacollector_recruitments_collectdata/', views.datacollector_recruitments_collectdata,name="datacollector_recruitments_collectdata"),
+    path('marketingtl_shtask_products_table/', views.marketingtl_shtask_products_table,name="marketingtl_shtask_products_table"),
+    path('marketingtl_shtask_recruitments_table/', views.marketingtl_shtask_recruitments_table,name="marketingtl_shtask_recruitments_table"),
+    path('marketingtl_shtask_products_details/', views.marketingtl_shtask_products_details,name="marketingtl_shtask_products_details"),
+    path('marketingtl_shtask_recruitments_details/', views.marketingtl_shtask_recruitments_details,name="marketingtl_shtask_recruitments_details"),
+    path('marketingtl_products_data/', views.marketingtl_products_data,name="marketingtl_products_data"),
+    path('marketingtl_recruitments_data/', views.marketingtl_recruitments_data,name="marketingtl_recruitments_data"),
+    
  #**********************Training project ******************
  #***********************course***********************************************
-    path('training/',views.trainings, name='training'),
-    path('course/',views.course, name='course'),
-    path('course_add/',views.course_add, name='course_add'),
-    path('course_addnew/',views.course_addnew, name='course_addnew'),
-    path('course_category/',views.course_category, name='course_category'),
-    path('course_courses/',views.course_courses, name='course_courses'),
-    path('course_course_details/',views.course_course_details, name='course_course_details'),
+    path('Trainings/',training_views.Trainings, name='Trainings'),
+    path('course/',training_views.course, name='course'),
+    path('course_add/',training_views.course_add, name='course_add'),
+    path('course_addnew/',training_views.course_addnew, name='course_addnew'),
+    path('course_category/',training_views.course_category, name='course_category'),
+    path('course_courses/',training_views.course_courses, name='course_courses'),
+    path('course_course_details/',training_views.course_course_details, name='course_course_details'),
 
 ]
