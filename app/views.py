@@ -364,6 +364,7 @@ def admin_completed_proj(request):
 def admin_completed_proj_details(request):
     return render (request,'software/admin\Admin_completed_proj_details.html')
 
+<<<<<<< HEAD
 def admin_completed_proj_manager(request):
     return render(request, 'software/admin\Admin_completed_proj_manager.html')
 
@@ -721,3 +722,29 @@ def marketingtl_recruitments_data(request):
  
 
  
+=======
+######################### TESTER #################################
+
+def tester_dashboard(request):
+    return render(request,'tester/tester_dashboard.html')  
+    
+
+def tester_task(request):
+    return render(request, 'tester/tester_task.html')
+
+
+def tester_taskassigned(request):
+    return render(request, 'tester/tester_taskassigned.html')
+
+
+def tester_taskpending(request):
+    return render(request, 'tester/tester_taskpending.html')
+    
+
+def tester_projects(request):
+    return render(request, 'tester/tester_projects.html')
+    
+
+def tester_projectdetails(request):
+    return render(request, 'tester/tester_projectdetails.html')
+>>>>>>> 9e0fa9d6b2e0d43d7d4b2fff1dae84e39242352a

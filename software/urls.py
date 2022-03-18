@@ -283,6 +283,7 @@ urlpatterns = [
 
     # ****************************Manager******************************
 
+<<<<<<< HEAD
     path('manager_Dashboard/', training_views.manager_Dashboard, name='manager_Dashboard'),
     path('manager_categories/', training_views.manager_categories, name='manager_categories'),
     path('manager_emp_categories/', training_views.manager_emp_categories, name='manager_emp_categories'),
@@ -379,4 +380,18 @@ urlpatterns = [
     path('trainee_payment_addpayment/',training_views.trainee_payment_addpayment,name='trainee_payment_addpayment'),
     path('trainee_payment_viewpayment/', training_views.trainee_payment_viewpayment,name='trainee_payment_viewpayment'),
 
+=======
+    path('manager_Dashboard',views.manager_Dashboard),
+   
+   ############################# TESTER ################################
+   
+   path('tester_dashboard', views.tester_dashboard, name='tester_dashboard'), 
+   path('tester_task', views.tester_task, name='tester_task'), 
+   path('tester_taskassigned', views.tester_taskassigned,name='tester_taskassigned'),
+   path('tester_taskpending', views.tester_taskpending,name='tester_taskpending'),
+   path('tester_projects', views.tester_projects, name='tester_projects'),
+   path('tester_projectdetails', views.tester_projectdetails,name='tester_projectdetails'),
+   
+   
+>>>>>>> 9e0fa9d6b2e0d43d7d4b2fff1dae84e39242352a
 ]
