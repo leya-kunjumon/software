@@ -6,7 +6,10 @@ def index(request):
 
 def software(request):
     return render(request,'software.html')
-    
+
+def employees(request):
+    return render(request,'employees.html')
+
 #***********************developer**************************************************
 def developer_Dashboard(request):
     return render(request,'developer\developer_Dashboard.html')
@@ -17,8 +20,8 @@ def developer_task(request):
 def developer_task_form(request):
     return render(request,'developer\developer_task_form.html')
 
-def developer_project(request):
-    return render(request,'developer\developer_project.html')
+# def developer_project(request):
+#     return render(request,'developer\developer_project.html')
 
 def developer_project_table(request):
     return render(request,'developer\developer_project_table.html')

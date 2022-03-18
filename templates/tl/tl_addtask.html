@@ -1,17 +1,21 @@
-{%extends 'tl\tl_base.html'%} 
+{%extends 'tl\tlDashboard.html'%} 
 {%load static%}
 {%block content%}
 <style>
-  #choose::file-selector-button {
-      background-color: rgb(37, 125, 207);
-      
-      
+  .Search {
+    margin-top: 4%;
+    float: right;
+    margin-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    line-height: 2;
+
   }
 </style>
 
 
 <div class="row " style="background-color: black;">
-  <div class="" style="font-size: 20px;font-weight: 600;color:#6C7293 ;">GIVE TASK</div>
+  <div class="" style="font-size: 20px;font-weight: 600;color:white ;">GIVE TASK</div>
 </div>
 <div class="row mt-3">
   <div class="col-md-2"></div>
@@ -91,12 +95,12 @@
               
             </div>
             <div class="col-md-8 ">
-              <div class="mt-2 mr-2 text-info"></div>
+              <div class="mt-2 mr-2 text-light"></div>
             </div>
           </div>
           <div class="row pt-1">
             <div class="col-md-4">
-              <div class=" mr-2 ml-3 mt-2" style="color:#6C7293;"></div>
+              <div class=" mr-2 ml-3 mt-2" style="color:white;"></div>
             </div>
             <div class="col-md-8 ">
               <input type="date" name="date" id="txtDate" class="drop form-control ml-3 mt-2 text-light" required
@@ -108,7 +112,7 @@
               <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Attach Files</div>
             </div>
             <div class="col-md-8 ">
-              <input type="file" id="choose" name="files" class="form-control mt-2 "
+              <input type="file" name="files" class="form-control mt-2 "
                 style="text-decoration:none;border:none;background-color: #191c24;color:#6C7293 ;">
             </div>
           </div>

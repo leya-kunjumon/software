@@ -1,78 +1,87 @@
 
-{%extends 'tl\tl_base.html'%} 
+{%extends 'tl\tlDashboard.html'%} 
 {%load static%}
 {%block content%}
-
 <style>
-  #choose::file-selector-button {
-      background-color: rgb(37, 125, 207);
-      padding: 12px;
-      color: white;
-      width: 100px;
+    textarea {
+        width: 250px;
+        height: 100px;
+}
+.table1 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1vh;
+    }
+
+@media screen and (max-width: 22em) {
+    textarea {
+        width: 170px;
+        height: 100px;
+}
+    
+}
+
+  *{
+    color:#6C7293;
+  }
+  .Search {
+    margin-top: 4%;
+    float: left;
+    margin-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    line-height: 2;
+ 
+}
+.col-sm-3{
+  color: white;
 }
 </style>
-<div class="row mt-5">
-  <div class="col-12 col-sm-1 col-md-2 col-lg-3"></div>
-  <div class="col-12 col-sm-10 col-md-9 col-lg-7 grid-margin stretch-card">      
-      <div class="card">
-          <div class="card-body">
-              <h4 class="card-title">Give Task</h4>
-              <form class="forms-sample" action="trainer_taskfor">
-                  <div class="row">
-                      <div class="col-md-12 col-lg-12">
-                          <div class="row"></div>
-                          <div class="form-group row">
-                              <label class="col-5 col-sm-5 col-md-3 col-lg-4 col-form-label ">Task
-                              </label>
-                              <div class="col-6 col-sm-7 col-md-6 col-lg-7 mt-2">
-                                  <label for="exampleInputEmail2">new project new task1 as</label>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                   
-                  
-                  <div class="form-group row">
-                      <label for="exampleInputEmail2" class="col-5 col-sm-5 col-md-3 col-lg-4 col-form-label">Submission Date</label>
-                      <div class="col-7 col-sm-7 col-md-8 col-lg-7 mt-2">
-                          <label for="exampleInputEmail2">01-03-2022</label>
-                      </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="exampleInputEmail2" class="col-5 col-sm-5 col-md-3 col-lg-4 col-form-label">Due
-                        Date</label>
-                    <div class="col-7 col-sm-7 col-md-8 col-lg-7 mt-2">
-                        <label for="exampleInputEmail2">01-03-2022</label>
-                    </div>
-                </div>
-                  <div class="form-group row">
-                      <label for="exampleInputEmail2"
-                          class="col-5 col-sm-5 col-md-3 col-lg-4 col-form-label">Screenshot</label>
-                      <div class="col-7 col-sm-7 col-md-8 col-lg-7 mt-2">
-                          <input type="file" class="form-control text-light" id="choose" required />
-                      </div>
-                  </div>
 
-                  <div class="form-group row">
-                      <label for="exampleInputEmail2"
-                          class="col-5 col-sm-5 col-md-3 col-lg-4 col-form-label">Description</label>
-                      <div class="col-7 col-sm-7 col-md-8 col-lg-7 mt-2">
-                          <textarea class="form-control text-light" rows="30" id="" style="height: 140px" required></textarea>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-4 col-sm-5 col-md-5"></div>
-                      <div class="col-7 col-sm-5 col-md-7">
-                          <button class="btn btn-outline-primary btn-icon-text mt-3">
-                              <i class="mdi mdi-file-check btn-icon-prepend"></i> Submit
-                          </button>
-                      </div>
-                  </div>
-              </form>
+
+<h2 style="color: white;">PROJECTS</h2><br>
+
+<div class="col-12 grid-margin stretch-card pt-2 table1">
+    <div class="card">
+      <div class="card-body">
+      
+        <form action="#" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="form-group row">
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:#6C7293 ;">TASK</label>
+            <div class="col-sm-9">
+                <label for="exampleInputUsername2" class="col-sm-3 col-form-label"style="color:white;" required>TL module</label>
+            </div>
           </div>
+          <div class="form-group row">
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:#6C7293 ;">SUBMISSION DATE</label>
+            <div class="col-sm-9">
+                <label for="exampleInputUsername2" class="col-sm-3 col-form-label"style="color:white;" required>15/03/2022</label>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:#6C7293 ;">DUE DATE</label>
+            <div class="col-sm-9">
+                <label for="exampleInputUsername2" class="col-sm-3 col-form-label"style="color:white" required>15/03/2022</label>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="exampleInputMobile" class="col-sm-3 col-form-label" style="color:#6C7293 ;">SCREENSHOT</label>
+            <div class="col-sm-5">
+              <input type="file" name="scn" class="form-control text-light" style="text-decoration:none;border:none;background-color: #191c24;color:#6C7293 ;">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="exampleInputMobile" class="col-sm-3 col-form-label" style="color:#6C7293 ;">DESCRIPTION</label>
+              <span class="col-sm-9">
+                <textarea class="form-control text-light" name="description" style="height: 150px; max-width: 300px; color:#6C7293;" required></textarea>
+                </span>
+          </div>
+          <button style="float: right;" type="submit" class="btn btn-primary Search me-2" >Submit</button>
+         
+        </form>
       </div>
+    </div>
   </div>
-</div>
-
 
 {% endblock  %}

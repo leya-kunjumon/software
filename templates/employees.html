@@ -37,53 +37,17 @@
 </head>
 <body style="background-color: black;">
     <!-- <div class="main-panel"> -->
-        <div class="content-wrapper" style="height:720px;"> 
-            <div class="row" style="padding-top:20px;">
-                <div class="col-lg-4 col-sm-4 col-12 col-md-4 grid-margin"style="padding-top:20px">
-                    <a href="{% url 'admin_Dashboard'%}" style="text-decoration: none">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row pt-3" >
-                                    <div class="col-8 col-sm-12 col-xl-8 col-md-7 my-auto">
-                                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                            <h3 class="mb-0" style="color:white;font-size:20px; ">Admin</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-sm-12 col-xl-2 col-md-5 text-center text-xl-right">
-                                        <i class="icon-lg mdi mdi-account-multiple text-warning ms-auto"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-4 col-12 col-md-4 grid-margin"style="padding-top:20px">
-                    <a href="{% url 'manager_Dashboard'%}" style="text-decoration: none">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row pt-3">
-                                    <div class="col-8 col-sm-12 col-xl-8 col-md-7 my-auto">
-                                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                            <h3 class="mb-0" style="color:white;font-size:20px; ">Manager</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-sm-12 col-xl-2 col-md-5 text-center text-xl-right">
-                                        <i class="icon-lg mdi mdi-account-multiple text-warning ms-auto"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+        <div class="content-wrapper" style="height:720px;">
+            <div class="row" style="padding-top:20px;">                
                 
                 <div class="col-lg-4 col-sm-4 col-12 col-md-4 grid-margin"style="padding-top:20px">
-                    <a href="{% url 'employees'%} " style="text-decoration: none">
+                    <a href="{% url 'pm_Dashboard'%} " style="text-decoration: none">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row pt-3">
                                     <div class="col-8 col-sm-12 col-xl-8 col-md-7 my-auto">
                                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                            <h3 class="mb-0" style="color:white;font-size:20px; ">Employees</h3>
+                                            <h3 class="mb-0" style="color:white;font-size:20px; ">Project Manager</h3>
                                         </div>
                                     </div>
                                     <div class="col-4 col-sm-12 col-xl-2 col-md-5 text-center text-xl-right">
@@ -94,16 +58,16 @@
                         </div>
                     </a>
                 </div>
-            </div>
-            <div class="row" style="padding-top:20px;">
+            
+            
                 <div class="col-lg-4 col-sm-4 col-12 col-md-4 grid-margin"style="padding-top:20px">
-                    <a href="{% url 'project_details'%}" style="text-decoration: none">
+                    <a href="{% url 'index_tl' %}" style="text-decoration: none">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row pt-3" >
                                     <div class="col-8 col-sm-12 col-xl-8 col-md-7 my-auto">
                                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                            <h3 class="mb-0" style="color:white;font-size:20px; ">Project</h3>
+                                            <h3 class="mb-0" style="color:white;font-size:20px; ">TL</h3>
                                         </div>
                                     </div>
                                     <div class="col-4 col-sm-12 col-xl-2 col-md-5 text-center text-xl-right">
@@ -115,13 +79,13 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-4 col-12 col-md-4 grid-margin"style="padding-top:20px">
-                    <a href="{% url 'client_card'%}" style="text-decoration: none">
+                    <a href="{% url 'hr_Dashboard'%}" style="text-decoration: none">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row pt-3" >
                                     <div class="col-8 col-sm-12 col-xl-8 col-md-7 my-auto">
                                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                            <h3 class="mb-0" style="color:white;font-size:20px; ">Client</h3>
+                                            <h3 class="mb-0" style="color:white;font-size:20px; ">HR</h3>
                                         </div>
                                     </div>
                                     <div class="col-4 col-sm-12 col-xl-2 col-md-5 text-center text-xl-right">
@@ -133,13 +97,13 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-4 col-12 col-md-4 grid-margin"style="padding-top:20px">
-                    <a href="{% url 'digitalmarketing_card'%}" style="text-decoration: none">
+                    <a href="{% url 'developer_Dashboard'%}" style="text-decoration: none">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row pt-3" >
                                     <div class="col-8 col-sm-12 col-xl-8 col-md-7 my-auto">
                                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                            <h3 class="mb-0" style="color:white;font-size:20px; ">Digital Marketing</h3>
+                                            <h3 class="mb-0" style="color:white;font-size:20px; ">Developer</h3>
                                         </div>
                                     </div>
                                     <div class="col-4 col-sm-12 col-xl-2 col-md-5 text-center text-xl-right">
@@ -150,10 +114,29 @@
                         </div>
                     </a>
                 </div>
-            </div>
             
+            
+                <div class="col-lg-4 col-sm-4 col-12 col-md-4 grid-margin"style="padding-top:20px">
+                    <a href="{% url 'tester_dashboard'%} "style="text-decoration: none">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row pt-3" >
+                                    <div class="col-8 col-sm-12 col-xl-8 col-md-7 my-auto">
+                                        <div class="d-flex d-sm-block d-md-flex align-items-center">
+                                            <h3 class="mb-0" style="color:white;font-size:20px; ">Tester</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-sm-12 col-xl-2 col-md-5 text-center text-xl-right">
+                                        <i class="icon-lg mdi mdi-account-multiple text-danger ms-auto"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 
                 
+            </div>
             
         </div>
     </div>

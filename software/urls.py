@@ -5,6 +5,7 @@ from app import views
 urlpatterns = [
 
     path('', views.index, name='index'),
+    path('employees/', views.employees, name='employees'),
     path('software/', views.software, name='software'),
 
     # ***********************developer***********************************************
@@ -12,7 +13,7 @@ urlpatterns = [
     path('developer_Dashboard/', views.developer_Dashboard,name='developer_Dashboard'),
     path('developer_task/', views.developer_task, name='developer_task'),
     path('developer_task_form/', views.developer_task_form,name='developer_task_form'),
-    path('developer_project/', views.developer_project, name='developer_project'),
+#     path('developer_project/', views.developer_project, name='developer_project'),
     path('developer_project_table/', views.developer_project_table,name='developer_project_table'),
     path('developer_attendance/', views.developer_attendance,name='developer_attendance'),
     path('developer_attendance_list/', views.developer_attendance_list,name='developer_attendance_list'),
