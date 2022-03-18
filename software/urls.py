@@ -13,7 +13,6 @@ urlpatterns = [
     path('developer_Dashboard/', views.developer_Dashboard,name='developer_Dashboard'),
     path('developer_task/', views.developer_task, name='developer_task'),
     path('developer_task_form/', views.developer_task_form,name='developer_task_form'),
-#     path('developer_project/', views.developer_project, name='developer_project'),
     path('developer_project_table/', views.developer_project_table,name='developer_project_table'),
     path('developer_attendance/', views.developer_attendance,name='developer_attendance'),
     path('developer_attendance_list/', views.developer_attendance_list,name='developer_attendance_list'),
@@ -327,6 +326,15 @@ urlpatterns = [
 
     path('marketingtl_recruitments_data/', views.marketingtl_recruitments_data,
          name="marketingtl_recruitments_data"),
-
+ 
+ #**********************Training project ******************
+ #***********************course***********************************************
+    path('training/',views.trainings, name='training'),
+    path('course/',views.course, name='course'),
+    path('course_add/',views.course_add, name='course_add'),
+    path('course_addnew/',views.course_addnew, name='course_addnew'),
+    path('course_category/',views.course_category, name='course_category'),
+    path('course_courses/',views.course_courses, name='course_courses'),
+    path('course_course_details/',views.course_course_details, name='course_course_details'),
 
 ]
