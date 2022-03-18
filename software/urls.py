@@ -1,3 +1,4 @@
+from app import views
 from django.contrib import admin
 from django.urls import path
 from app import views
@@ -5,6 +6,7 @@ from training import views as training_views
 
 # from mysite.books import views as books_views
 # from mysite.contact import views as contact_views
+
 
 urlpatterns = [
 
