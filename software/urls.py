@@ -306,7 +306,7 @@ urlpatterns = [
 
     # ****************************Trainer******************************
 
-    path('trainer_dashboard', training_views.trainer_dashboard, name='trainer_dashboard'),
+    path('trainer_dashboard/', training_views.trainer_dashboard, name='trainer_dashboard'),
     path('trainer_applyleave/', training_views.trainer_applyleave, name='trainer_applyleave'),
     path('trainer_applyleave_form/', training_views.trainer_applyleave_form, name='trainer_applyleave_form'),
     path('trainer_traineesleave_table/', training_views.trainer_traineesleave_table, name='trainer_traineesleave_table'),
